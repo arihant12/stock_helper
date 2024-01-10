@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Chart and News</title>
+</head>
+<body>
+    <h1>Stock Chart for {{ symbol }}</h1>
+    {% if chart %}
+        <img src="data:image/png;base64,{{ chart }}">
+    {% else %}
+        <p>No chart available. Please search for a stock symbol.</p>
+    {% endif %}
+
+    {% if news_articles %}
+        <h2>Related News</h2>
+        <ul>
+            {% for article in news_articles %}
+                <li>
+                    <a href="{{ article.url }}" target="_blank">{{ article.title }}</a>
+                    <p>{{ article.description }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No news articles available.</p>
+    {% endif %}
+    
+    <a href="/">Back to search</a>
+</body>
+</html>
