@@ -9,3 +9,5 @@ The neural nets deployed on the news classify whether the stock is likely to mak
 
 The neural networks deployed on the stock market chart predict the future prices. The user can change the data frame which should help them with their trading regardless of whether they are
 trading short term or long term. 
+
+We also have a section for news that would cause fast changes in a particular stock price or the market overall. 
