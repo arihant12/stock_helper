@@ -47,5 +47,7 @@ COPY . .
 # Expose the port that the application listens on.
 EXPOSE 8080
 
-# Run the application.
-CMD gunicorn 'app:app' --bind=0.0.0.0:8000
+ENV PORT 8080
+
+# Run the web service on container startup.
+CMD [ "python", "app.py" ]
